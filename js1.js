@@ -1,6 +1,12 @@
 /*### Complete and commit and push each task below. Parts of the code are shown as hints, the rest as been "redacted" */
 
 function yearOfBirth(age) {
+    try { if (age < 0) {
+        throw new Error("Age can not be negative");
+    }
+    } catch(e) {
+        console.error(e);
+    }
     return 2018 - age;
 }
 
@@ -12,29 +18,6 @@ function  whoAmI(name, age) {
 
 whoAmI("Miriam", 29);
 /* 
-
-5) Move the year of birth calculation into a new function. 
-> Do you get an error if the variable and function are both name `yearOfBirth`?
-```
-Uncaught TypeError: yearOfBirth is not a function
-    at whoAmI (<anonymous>:6:21)
-    at <anonymous>:10:1
-```
-
-```
-function yearOfBirth(age){
-  ..........
-}
-
-function whoAmI(name, age){
-	var yob = yearOfBirth(age);
-	..........
-	..........
-}
-whoAmI(..........);
-```
-
-- Is it a habit yet?
 
 6) What happens if you enter a negative age? Add a `try/catch`
 
