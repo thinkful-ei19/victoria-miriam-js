@@ -1,20 +1,11 @@
-/*### Complete and commit and push each task below. Parts of the code are shown as hints, the rest as been "redacted" 
+/*### Complete and commit and push each task below. Parts of the code are shown as hints, the rest as been "redacted" */
 
-1) Write a statement which logs 'Hi, my name is Chris and I'm 29 years old' to the console (you can lie about your age). */
-
-console.log(`Hi, my name is Miriam and I'm 29 years old.`);
-
-/* 2) Wrap the statement in a function called `whoAmI` and call that function
-
-```
-function..........
-  console.l..........my name is Chris and I'm 29 ye..........
+function  whoAmI() {
+    console.log(`Hi, my name is Miriam and I'm 29 years old.`);
 }
-whoA.....
-```
-- Remember to commit and ...
 
-3) Change the hard coded string into a parameters, `name` and `age`
+whoAmI();
+/* 3) Change the hard coded string into a parameters, `name` and `age`
 ```
 funct..........(name, age){ 
   console.l..........my name is Chris and I'm 29 ye..........
