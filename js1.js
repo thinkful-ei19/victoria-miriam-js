@@ -19,23 +19,24 @@ function  whoAmI(name, age) {
     } catch(e) {
         console.error(e);
     }
-    
+ 
+    try { if (typeof(age) != "number") {
+        throw new Error("Age is not given as a number");
+    }
+    } catch(e) {
+        console.error(e);
+    }
+ 
+    try { if (typeof(name) != "string") {
+        throw new Error("Name is not given as a string");
+    }
+    } catch(e) {
+        console.error(e);
+    }
+ 
     let yob = yearOfBirth(age); 
     console.log(`Hi, my name is ${name} and I'm ${age} years old.`);
     console.log(`I was born in ${yob}.`)
 }
 
 whoAmI("Miriam", 29);
-/* 
-
-
-
-7) Check if `name` and `age` have been entered. Create a conditional which outputs `console.error("Arguments not valid")`.
-
-> Hint: How do you check if a parameter or variable has not been "defined"?
-
-
-8) What happens if you pass `"29"` as the age? What about `"twenty nine"`? Implement a check to ensure the name is a `string` and the age is a `number`. 
-
-> Hint: `typeof age`
-> Investigate: What is `NaN`? */
