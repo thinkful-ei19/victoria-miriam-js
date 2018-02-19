@@ -1,10 +1,10 @@
 /*### Complete and commit and push each task below. Parts of the code are shown as hints, the rest as been "redacted" */
 
-function  whoAmI() {
-    console.log(`Hi, my name is Miriam and I'm 29 years old.`);
+function  whoAmI(name, age) {
+    console.log(`Hi, my name is ${name} and I'm ${age} years old.`);
 }
 
-whoAmI();
+whoAmI("Miriam", 29);
 /* 3) Change the hard coded string into a parameters, `name` and `age`
 ```
 funct..........(name, age){ 
