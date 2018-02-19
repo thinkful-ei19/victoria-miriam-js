@@ -1,19 +1,13 @@
 /*### Complete and commit and push each task below. Parts of the code are shown as hints, the rest as been "redacted" */
 
 function  whoAmI(name, age) {
+    let yearOfBirth = 2018 - age; 
     console.log(`Hi, my name is ${name} and I'm ${age} years old.`);
+    console.log(`I was born in ${yearOfBirth}.`)
 }
 
 whoAmI("Miriam", 29);
-/* 3) Change the hard coded string into a parameters, `name` and `age`
-```
-funct..........(name, age){ 
-  console.l..........my name is Chris and I'm 29 ye..........
-}
-whoAmI(..........);
-```
-
-- Remember to ...
+/* 
 
 4) Create a variable named `yearOfBirth` and calculate the year based on age (ex 2016 - age).
 Then add another `console.log` statement that outputs `I was born in [insert yearOfBirth]`.
