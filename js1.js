@@ -1,27 +1,17 @@
 /*### Complete and commit and push each task below. Parts of the code are shown as hints, the rest as been "redacted" */
 
+function yearOfBirth(age) {
+    return 2018 - age;
+}
+
 function  whoAmI(name, age) {
-    let yearOfBirth = 2018 - age; 
+    let yob = yearOfBirth(age); 
     console.log(`Hi, my name is ${name} and I'm ${age} years old.`);
-    console.log(`I was born in ${yearOfBirth}.`)
+    console.log(`I was born in ${yob}.`)
 }
 
 whoAmI("Miriam", 29);
 /* 
-
-4) Create a variable named `yearOfBirth` and calculate the year based on age (ex 2016 - age).
-Then add another `console.log` statement that outputs `I was born in [insert yearOfBirth]`.
-
-```
-funct..........(name, age){ 
-  var yearOf..........16 - age;
-  console.l..........my name is Chris and I'm 29 ye..........
-  console.log("I was born in " + yearOf.......
-}
-whoAmI(..........);
-```
-
-- Just do it...
 
 5) Move the year of birth calculation into a new function. 
 > Do you get an error if the variable and function are both name `yearOfBirth`?
