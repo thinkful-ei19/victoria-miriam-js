@@ -10,7 +10,16 @@ function yearOfBirth(age) {
     return 2018 - age;
 }
 
+
+
 function  whoAmI(name, age) {
+    try { if (age === undefined || name === undefined) {
+        throw new Error("Arguments not valid");
+    }
+    } catch(e) {
+        console.error(e);
+    }
+    
     let yob = yearOfBirth(age); 
     console.log(`Hi, my name is ${name} and I'm ${age} years old.`);
     console.log(`I was born in ${yob}.`)
@@ -19,27 +28,6 @@ function  whoAmI(name, age) {
 whoAmI("Miriam", 29);
 /* 
 
-6) What happens if you enter a negative age? Add a `try/catch`
-
-> Note: a negative age doesn't cause a runtime error but it doesn't make sense.
-
-```
-function yearOfBirth(age){
-  ..........
-		throw new Error("Age can not be negative");
-	..
-	return 2016 - age;
-}
-
-.
-.
-.
-.
-.
-.
-
-whoAmI("Chris", -5);
-```
 
 
 7) Check if `name` and `age` have been entered. Create a conditional which outputs `console.error("Arguments not valid")`.
