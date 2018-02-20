@@ -51,7 +51,7 @@ If the first letter of the encoded word isn't 'a', 'b', 'c', or 'd' (for example
 Write a function called decode which takes an encoded word as an argument, and returns the correct decoded character.
 
 Use your function to decode the following message: 'craft block argon meter bells brown croon droop'.
-*/
+
 function code(word){
   var i = word[0];
   if(i === 'a'){
@@ -76,3 +76,33 @@ function message(str) {
   return outputMessage;
 }
 console.log(message('craft block argon meter bells brown croon droop'));
+
+In the game Rock Paper Scissors, two players simultaneously choose one of the three options: rock, paper, or scissors. If both players choose the same option, the result is a tie. Otherwise the winner is determined as follows:
+
+Rock beats scissors
+Scissors beats paper
+Paper beats rock
+Create a game in which you are playing against the computer. The computer randomly chooses rock, paper, or scissors. Your function should take a number as an argument of 1, 2, or 3 to represent rock, paper, or scissors, respectively, and determine the winner. If you enter anything other than a number between 1-3, throw an error.
+*/
+
+function rps(playerNum) {
+  const compNum = Math.floor(Math.random() * 3) + 1;
+  if ([1,2,3].indexOf(playerNum) === -1) {
+    throw new Error('Number must be between 1-3');
+  } else if (playerNum === compNum) {
+    return 'No winners today';
+  } else if (playerNum === 1 && compNum === 2) {
+    return 'Computer wins';
+  } else if (playerNum === 1 && compNum === 3) {
+    return 'Player wins';
+  } else if (playerNum === 2 && compNum === 1) {
+    return 'Computer wins';
+  } else if (playerNum === 2 && compNum === 3) {
+    return 'Player wins';
+  } else if (playerNum === 3 && compNum === 1) {
+    return 'Computer wins';
+  } else if (playerNum === 3 && compNum === 2) {
+    return 'Player wins';
+  }
+}
+console.log(rps(1))
