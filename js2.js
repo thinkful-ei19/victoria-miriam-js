@@ -83,7 +83,7 @@ Rock beats scissors
 Scissors beats paper
 Paper beats rock
 Create a game in which you are playing against the computer. The computer randomly chooses rock, paper, or scissors. Your function should take a number as an argument of 1, 2, or 3 to represent rock, paper, or scissors, respectively, and determine the winner. If you enter anything other than a number between 1-3, throw an error.
-*/
+
 
 function rps(playerNum) {
   const compNum = Math.floor(Math.random() * 3) + 1;
@@ -106,3 +106,42 @@ function rps(playerNum) {
   }
 }
 console.log(rps(1))
+Write a function that takes the arguments month (string) and leapYear (boolean, optional) and use a switch statement to return a sentence explaining how many days there are in that month.
+
+For example if the argument provided is 'January', the function should return "January has 31 days". For February, it should return the appropriate 29 for leap years and 28 for non-leap. If the string doesn't match a valid month, throw an error with the message: 'Must provide a valid month.'
+*/
+/*if (str != month) {
+  throw new Error('Must provide a valid month.');*/
+function daysInMonth(month, leapYear) {
+  if (leapYear === true && month === 'February') {
+    month = 'leapFebruary';
+  }
+  switch(month) {
+    case 'September':
+    case 'April':
+    case 'June':
+    case 'November':
+      days = 30;
+      break;
+    case 'January':
+    case 'March':
+    case 'May':
+    case 'July':
+    case 'August':
+    case 'October':
+    case 'December':
+      days = 31;
+      break;
+    case 'February':
+      days = 28;
+      break;
+    case 'leapFebruary':
+      days = 29;
+      break;
+    default:
+      throw new Error('Must provide a valid month.')
+      break;
+  }
+  return days
+}
+console.log(daysInMonth('April',true))
